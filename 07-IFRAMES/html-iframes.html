@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML iFrames</title>
+</head>
+<body>
+    <h1>HTML iFrames (Inline Frames)</h1>
+    
+    <!-- Introduction to iFrames -->
+    <h2>What is an iFrame?</h2>
+    <p>An <strong>iFrame</strong> (inline frame) is an HTML element that allows you to embed another HTML document 
+    within the current document. It creates a rectangular region where external content can be displayed.</p>
+    
+    <h3>Key Points about iFrames:</h3>
+    <ul>
+        <li>Embeds external web pages or documents</li>
+        <li>Creates a separate browsing context</li>
+        <li>Can display content from the same domain or external domains</li>
+        <li>Useful for embedding maps, videos, social media content, and other web applications</li>
+        <li>Has security considerations that need to be understood</li>
+    </ul>
+    
+    <!-- Basic iFrame Syntax -->
+    <hr>
+    <h2>Basic iFrame Syntax</h2>
+    <p>The basic syntax for an iFrame is:</p>
+    <pre>&lt;iframe src="URL" width="width" height="height"&gt;&lt;/iframe&gt;</pre>
+    
+    <h3>Simple iFrame Example</h3>
+    <!-- Basic iFrame embedding a simple HTML page -->
+    <p>Here's a basic iFrame that would embed another HTML page:</p>
+    <iframe src="https://www.w3schools.com/html/html_iframe.asp" 
+            width="600" 
+            height="400" 
+            title="W3Schools iFrame Tutorial">
+        <p>Your browser does not support iFrames. 
+        <a href="https://www.w3schools.com/html/html_iframe.asp">Visit the page directly</a></p>
+    </iframe>
+    
+    <!-- iFrame Attributes -->
+    <hr>
+    <h2>iFrame Attributes</h2>
+    
+    <h3>Essential Attributes:</h3>
+    <dl>
+        <dt><code>src</code></dt>
+        <dd>Specifies the URL of the document to embed</dd>
+        
+        <dt><code>width</code> and <code>height</code></dt>
+        <dd>Define the dimensions of the iFrame in pixels or percentages</dd>
+        
+        <dt><code>title</code></dt>
+        <dd>Provides accessible description of the iFrame content (important for screen readers)</dd>
+        
+        <dt><code>name</code></dt>
+        <dd>Gives the iFrame a name that can be used as a target for links</dd>
+        
+        <dt><code>frameborder</code></dt>
+        <dd>Controls whether to display a border (0 = no border, 1 = border) - deprecated in HTML5</dd>
+        
+        <dt><code>scrolling</code></dt>
+        <dd>Controls scrollbars (yes, no, auto) - deprecated in HTML5</dd>
+        
+        <dt><code>sandbox</code></dt>
+        <dd>Applies security restrictions to the embedded content</dd>
+        
+        <dt><code>loading</code></dt>
+        <dd>Controls when the iFrame loads (lazy, eager)</dd>
+    </dl>
+    
+    <!-- Different Sizing Examples -->
+    <hr>
+    <h2>iFrame Sizing Examples</h2>
+    
+    <h3>Fixed Size iFrame</h3>
+    <!-- Fixed size iFrame -->
+    <iframe src="https://www.example.com" 
+            width="400" 
+            height="300" 
+            title="Example website in fixed size iFrame">
+        <p>Your browser does not support iFrames.</p>
+    </iframe>
+    
+    <h3>Percentage-based Size iFrame</h3>
+    <!-- Percentage-based size iFrame -->
+    <iframe src="https://www.example.com" 
+            width="100%" 
+            height="300" 
+            title="Example website in responsive iFrame">
+        <p>Your browser does not support iFrames.</p>
+    </iframe>
+    
+    <h3>No Border iFrame (HTML5 Style)</h3>
+    <!-- Modern iFrame without border using CSS-like approach -->
+    <iframe src="https://www.example.com" 
+            width="500" 
+            height="350" 
+            style="border: none;" 
+            title="Borderless iFrame example">
+        <p>Your browser does not support iFrames.</p>
+    </iframe>
+    
+    <!-- Embedding Different Content Types -->
+    <hr>
+    <h2>Embedding Different Types of Content</h2>
+    
+    <h3>Embedding YouTube Videos</h3>
+    <p>YouTube provides embed codes that use iFrames:</p>
+    <!-- YouTube video embed example -->
+    <iframe width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
+    
+    <h3>Embedding Google Maps</h3>
+    <p>Google Maps can be embedded using iFrames:</p>
+    <!-- Google Maps embed example -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.1234567890123!2d-74.0059413!3d40.7127753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjAiTiA3NMKwMDAnMjEuNCJX!5e0!3m2!1sen!2sus!4v1234567890123" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Google Maps showing New York City">
+    </iframe>
+    
+    <h3>Embedding Social Media Content</h3>
+    <p>Many social media platforms provide iFrame embed codes:</p>
+    <!-- Example of social media embed structure -->
+    <iframe src="https://www.facebook.com/plugins/post.php?href=https://www.facebook.com/example" 
+            width="500" 
+            height="300" 
+            style="border:none;overflow:hidden" 
+            scrolling="no" 
+            frameborder="0" 
+            allowfullscreen="true" 
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            title="Facebook post embed">
+    </iframe>
+    
+    <!-- iFrame Security -->
+    <hr>
+    <h2>iFrame Security - Sandbox Attribute</h2>
+    
+    <h3>Understanding the Sandbox Attribute</h3>
+    <p>The <code>sandbox</code> attribute applies security restrictions to iFrame content:</p>
+    
+    <h4>Sandbox Values:</h4>
+    <ul>
+        <li><code>allow-forms</code> - Allows form submission</li>
+        <li><code>allow-scripts</code> - Allows JavaScript execution</li>
+        <li><code>allow-same-origin</code> - Allows content to be treated as from same origin</li>
+        <li><code>allow-top-navigation</code> - Allows navigation of top-level browsing context</li>
+        <li><code>allow-popups</code> - Allows popups</li>
+        <li><code>allow-pointer-lock</code> - Allows pointer lock API</li>
+    </ul>
+    
+    <h3>Sandboxed iFrame Examples</h3>
+    
+    <h4>Highly Restricted iFrame</h4>
+    <!-- Highly sandboxed iFrame -->
+    <iframe src="https://www.example.com" 
+            width="400" 
+            height="200" 
+            sandbox="" 
+            title="Highly restricted sandboxed iFrame">
+        <p>Your browser does not support iFrames.</p>
+    </iframe>
+    
+    <h4>Partially Restricted iFrame</h4>
+    <!-- Partially sandboxed iFrame allowing scripts and forms -->
+    <iframe src="https://www.example.com" 
+            width="400" 
+            height="200" 
+            sandbox="allow-scripts allow-forms" 
+            title="Partially restricted sandboxed iFrame">
+        <p>Your browser does not support iFrames.</p>
+    </iframe>
+    
+    <!-- iFrame as Link Target -->
+    <hr>
+    <h2>Using iFrame as Link Target</h2>
+    
+    <h3>Named iFrame for Link Targeting</h3>
+    <p>You can use an iFrame as a target for links by giving it a name:</p>
+    
+    <!-- Links that target the iFrame -->
+    <p>Click these links to load content in the iFrame below:</p>
+    <ul>
+        <li><a href="https://www.w3schools.com" target="content-frame">W3Schools</a></li>
+        <li><a href="https://developer.mozilla.org" target="content-frame">MDN Web Docs</a></li>
+        <li><a href="https://www.w3.org" target="content-frame">W3C</a></li>
+    </ul>
+    
+    <!-- Target iFrame -->
+    <iframe name="content-frame" 
+            src="https://www.example.com" 
+            width="100%" 
+            height="400" 
+            title="Content display frame">
+        <p>Your browser does not support iFrames.</p>
+    </iframe>
+    
+    <!-- Responsive iFrames -->
+    <hr>
+    <h2>Responsive iFrames</h2>
+    
+    <h3>Making iFrames Responsive</h3>
+    <p>To make iFrames responsive, you typically need to use CSS. Here's the HTML structure:</p>
+    
+    <!-- Container for responsive iFrame -->
+    <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+        <iframe src="https://www.example.com" 
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                title="Responsive iFrame example">
+            <p>Your browser does not support iFrames.</p>
+        </iframe>
+    </div>
+    
+    <!-- iFrame Best Practices -->
+    <hr>
+    <h2>iFrame Best Practices</h2>
+    
+    <h3>✅ Do:</h3>
+    <ul>
+        <li>Always include a <code>title</code> attribute for accessibility</li>
+        <li>Provide fallback content between opening and closing tags</li>
+        <li>Use HTTPS URLs when possible</li>
+        <li>Consider using <code>loading="lazy"</code> for performance</li>
+        <li>Use appropriate sandbox restrictions for security</li>
+        <li>Test iFrame content on different screen sizes</li>
+        <li>Ensure embedded content is from trusted sources</li>
+    </ul>
+    
+    <h3>❌ Don't:</h3>
+    <ul>
+        <li>Embed untrusted content without proper sandboxing</li>
+        <li>Use iFrames for essential navigation or content</li>
+        <li>Forget to provide alternative access methods</li>
+        <li>Ignore the security implications of embedded content</li>
+        <li>Use iFrames when simpler solutions would work</li>
+        <li>Embed content that doesn't allow iFrame embedding</li>
+    </ul>
+    
+    <!-- Common Use Cases -->
+    <hr>
+    <h2>Common iFrame Use Cases</h2>
+    
+    <h3>1. Embedding Third-party Widgets</h3>
+    <ul>
+        <li>Social media feeds</li>
+        <li>Weather widgets</li>
+        <li>Calendar applications</li>
+        <li>Chat systems</li>
+    </ul>
+    
+    <h3>2. Content Integration</h3>
+    <ul>
+        <li>YouTube videos</li>
+        <li>Google Maps</li>
+        <li>Online forms</li>
+        <li>Payment processors</li>
+    </ul>
+    
+    <h3>3. Application Embedding</h3>
+    <ul>
+        <li>Online tools and calculators</li>
+        <li>Document viewers</li>
+        <li>Interactive demos</li>
+        <li>Third-party applications</li>
+    </ul>
+    
+    <!-- Accessibility Considerations -->
+    <hr>
+    <h2>Accessibility Considerations</h2>
+    
+    <h3>Making iFrames Accessible:</h3>
+    <ul>
+        <li><strong>Title Attribute:</strong> Always provide descriptive titles</li>
+        <li><strong>Fallback Content:</strong> Include alternative content for unsupported browsers</li>
+        <li><strong>Keyboard Navigation:</strong> Ensure embedded content is keyboard accessible</li>
+        <li><strong>Screen Reader Support:</strong> Test with screen readers when possible</li>
+        <li><strong>Focus Management:</strong> Consider how focus moves in and out of iFrames</li>
+    </ul>
+    
+    <h3>Example of Accessible iFrame:</h3>
+    <iframe src="https://www.example.com" 
+            width="600" 
+            height="400" 
+            title="Example website demonstrating accessible web design principles"
+            role="application">
+        <p>This content requires iFrame support. 
+        <a href="https://www.example.com">Visit the content directly</a> 
+        for the same information.</p>
+    </iframe>
+    
+    <!-- Performance Considerations -->
+    <hr>
+    <h2>Performance Considerations</h2>
+    
+    <h3>Optimizing iFrame Performance:</h3>
+    <ul>
+        <li><strong>Lazy Loading:</strong> Use <code>loading="lazy"</code> for below-the-fold iFrames</li>
+        <li><strong>Minimize iFrames:</strong> Each iFrame creates additional HTTP requests</li>
+        <li><strong>Consider Alternatives:</strong> Sometimes direct embedding is more efficient</li>
+        <li><strong>Monitor Load Times:</strong> iFrames can slow down page loading</li>
+    </ul>
+    
+    <h3>Lazy Loading Example:</h3>
+    <iframe src="https://www.example.com" 
+            width="600" 
+            height="400" 
+            loading="lazy" 
+            title="Lazy-loaded iFrame example">
+        <p>Your browser does not support iFrames.</p>
+    </iframe>
+    
+    <!-- Troubleshooting -->
+    <hr>
+    <h2>Common iFrame Issues and Solutions</h2>
+    
+    <h3>Issue: "This content cannot be displayed in a frame"</h3>
+    <p><strong>Cause:</strong> The target website has X-Frame-Options header preventing embedding.</p>
+    <p><strong>Solution:</strong> Contact the website owner or find alternative embedding methods.</p>
+    
+    <h3>Issue: iFrame not displaying correctly on mobile</h3>
+    <p><strong>Cause:</strong> Fixed dimensions don't work well on small screens.</p>
+    <p><strong>Solution:</strong> Use responsive techniques with CSS.</p>
+    
+    <h3>Issue: Security warnings</h3>
+    <p><strong>Cause:</strong> Mixing HTTP and HTTPS content.</p>
+    <p><strong>Solution:</strong> Ensure all content uses the same protocol (preferably HTTPS).</p>
+    
+    <p><a href="#top">Back to Top</a></p>
+    
+</body>
+</html>

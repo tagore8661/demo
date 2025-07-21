@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Links and Navigation</title>
+</head>
+<body>
+    <h1>HTML Links and Navigation</h1>
+    
+    <!-- Understanding Hypertext and Hyperlinks -->
+    <h2>What are Hypertext and Hyperlinks?</h2>
+    
+    <h3>Hypertext</h3>
+    <p><strong>Hypertext</strong> is text that contains links to other texts, documents, or resources. 
+    It allows non-linear reading and navigation through information. The "HT" in HTML stands for HyperText.</p>
+    
+    <h3>Hyperlinks</h3>
+    <p><strong>Hyperlinks</strong> (or simply "links") are clickable elements that connect one resource to another. 
+    They are the foundation of the World Wide Web, allowing users to navigate between pages and resources.</p>
+    
+    <!-- Basic Link Structure -->
+    <hr>
+    <h2>Basic Link Structure</h2>
+    
+    <h3>The Anchor Tag</h3>
+    <p>Links are created using the <code>&lt;a&gt;</code> (anchor) tag with the <code>href</code> attribute:</p>
+    <pre>&lt;a href="destination"&gt;Link Text&lt;/a&gt;</pre>
+    
+    <!-- External Links -->
+    <h2>External Links</h2>
+    <p>External links point to resources on other websites:</p>
+    
+    <h3>Basic External Link</h3>
+    <p>Visit <a href="https://www.w3.org">W3C (World Wide Web Consortium)</a> for web standards.</p>
+    
+    <h3>Link with Title Attribute</h3>
+    <p>Learn more at <a href="https://developer.mozilla.org" title="Mozilla Developer Network - Web development resources">MDN Web Docs</a>.</p>
+    
+    <h3>Opening Links in New Tab/Window</h3>
+    <p>Open <a href="https://www.github.com" target="_blank">GitHub</a> in a new tab.</p>
+    <p>Open <a href="https://stackoverflow.com" target="_blank" rel="noopener noreferrer">Stack Overflow</a> safely in new tab.</p>
+    
+    <!-- Internal Links -->
+    <hr>
+    <h2>Internal Links</h2>
+    
+    <h3>Relative Links</h3>
+    <p>Links to other pages in the same website:</p>
+    <ul>
+        <li><a href="basic-structure.html">Basic HTML Structure</a> (same folder)</li>
+        <li><a href="../03-FORMATTING-TAGS/text-formatting.html">Text Formatting</a> (different folder)</li>
+        <li><a href="/">Home Page</a> (root directory)</li>
+    </ul>
+    
+    <h3>Anchor Links (Same Page Navigation)</h3>
+    <p>Jump to different sections of the same page:</p>
+    <ul>
+        <li><a href="#email-links">Email Links Section</a></li>
+        <li><a href="#download-links">Download Links Section</a></li>
+        <li><a href="#image-links">Image Links Section</a></li>
+    </ul>
+    
+    <!-- Email Links -->
+    <hr>
+    <h2 id="email-links">Email Links</h2>
+    
+    <h3>Basic Email Link</h3>
+    <p>Contact us: <a href="mailto:info@example.com">info@example.com</a></p>
+    
+    <h3>Email with Subject</h3>
+    <p>Report a bug: <a href="mailto:support@example.com?subject=Bug Report">Send Bug Report</a></p>
+    
+    <h3>Email with Subject and Body</h3>
+    <p>Send feedback: <a href="mailto:feedback@example.com?subject=Website Feedback&body=Hello, I wanted to share my thoughts about your website...">Send Feedback</a></p>
+    
+    <h3>Email with Multiple Recipients</h3>
+    <p>Contact team: <a href="mailto:team@example.com?cc=manager@example.com&bcc=archive@example.com&subject=Team Meeting">Email Team</a></p>
+    
+    <!-- Telephone Links -->
+    <hr>
+    <h2>Telephone Links</h2>
+    
+    <h3>Basic Phone Link</h3>
+    <p>Call us: <a href="tel:+1234567890">+1 (234) 567-8900</a></p>
+    
+    <h3>International Phone Number</h3>
+    <p>International: <a href="tel:+44-20-7946-0958">+44 20 7946 0958</a></p>
+    
+    <!-- SMS Links -->
+    <hr>
+    <h2>SMS Links</h2>
+    
+    <h3>Basic SMS Link</h3>
+    <p>Send SMS: <a href="sms:+1234567890">Text us at +1 (234) 567-8900</a></p>
+    
+    <h3>SMS with Pre-filled Message</h3>
+    <p>Quick contact: <a href="sms:+1234567890?body=Hello, I'm interested in your services">Send Quick Message</a></p>
+    
+    <!-- Download Links -->
+    <hr>
+    <h2 id="download-links">Download Links</h2>
+    
+    <h3>File Download</h3>
+    <p>Download our brochure: <a href="files/brochure.pdf" download>Company Brochure (PDF)</a></p>
+    
+    <h3>Download with Custom Filename</h3>
+    <p>Get the report: <a href="files/annual-report-2024.pdf" download="Annual_Report_2024.pdf">Annual Report</a></p>
+    
+    <!-- Image Links -->
+    <hr>
+    <h2 id="image-links">Image Links</h2>
+    
+    <h3>Clickable Image</h3>
+    <p>Click the image to visit W3C:</p>
+    <a href="https://www.w3.org" target="_blank">
+        <img src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop" 
+             alt="Web development concept" 
+             width="200" 
+             height="100">
+    </a>
+    
+    <!-- Link States and Accessibility -->
+    <hr>
+    <h2>Link Accessibility and Best Practices</h2>
+    
+    <h3>Descriptive Link Text</h3>
+    <p>❌ Bad: <a href="https://www.example.com">Click here</a> for more information.</p>
+    <p>✅ Good: Read our <a href="https://www.example.com">complete privacy policy</a> for details.</p>
+    
+    <h3>Links with Context</h3>
+    <p>❌ Bad: <a href="document.pdf">PDF</a></p>
+    <p>✅ Good: <a href="document.pdf">User Manual (PDF, 2.5MB)</a></p>
+    
+    <h3>External Link Indicators</h3>
+    <p>Visit <a href="https://www.external-site.com" target="_blank" rel="noopener">External Website</a> (opens in new tab)</p>
+    
+    <!-- Navigation Examples -->
+    <hr>
+    <h2>Navigation Examples</h2>
+    
+    <h3>Simple Navigation Menu</h3>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <h3>Breadcrumb Navigation</h3>
+    <nav aria-label="Breadcrumb">
+        <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/tutorials/">Tutorials</a></li>
+            <li><a href="/tutorials/html/">HTML</a></li>
+            <li>Links</li>
+        </ol>
+    </nav>
+    
+    <!-- Advanced Link Attributes -->
+    <hr>
+    <h2>Advanced Link Attributes</h2>
+    
+    <h3>Relationship Attributes</h3>
+    <ul>
+        <li><a href="next-page.html" rel="next">Next Page</a> (indicates next in sequence)</li>
+        <li><a href="previous-page.html" rel="prev">Previous Page</a> (indicates previous in sequence)</li>
+        <li><a href="https://external-site.com" rel="nofollow">Sponsored Link</a> (don't follow for SEO)</li>
+    </ul>
+    
+    <h3>MIME Type Hints</h3>
+    <ul>
+        <li><a href="document.pdf" type="application/pdf">PDF Document</a></li>
+        <li><a href="spreadsheet.xlsx" type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">Excel File</a></li>
+        <li><a href="archive.zip" type="application/zip">ZIP Archive</a></li>
+    </ul>
+    
+    <!-- Link Styling Notes -->
+    <hr>
+    <h2>Link States (Default Browser Styling)</h2>
+    
+    <p>Links have different states that browsers style by default:</p>
+    <ul>
+        <li><strong>Unvisited links:</strong> Usually blue and underlined</li>
+        <li><strong>Visited links:</strong> Usually purple</li>
+        <li><strong>Active links:</strong> Usually red (while being clicked)</li>
+        <li><strong>Hover state:</strong> May change appearance when mouse hovers over</li>
+    </ul>
+    
+    <p>Test these states with this <a href="https://www.example.com">sample link</a>.</p>
+    
+    <!-- Back to Top Link -->
+    <hr>
+    <p><a href="#top">Back to Top</a></p>
+    
+</body>
+</html>

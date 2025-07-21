@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Semantic Elements</title>
+</head>
+<body>
+    <h1>HTML5 Semantic Elements</h1>
+    
+    <!-- Introduction to Semantic HTML -->
+    <h2>What is Semantic HTML?</h2>
+    <p><strong>Semantic HTML</strong> uses HTML elements that have meaningful names that describe their content and purpose, 
+    rather than just their appearance. Semantic elements make your code more readable, accessible, and SEO-friendly.</p>
+    
+    <h3>Benefits of Semantic HTML:</h3>
+    <ul>
+        <li><strong>Accessibility:</strong> Screen readers can better understand page structure</li>
+        <li><strong>SEO:</strong> Search engines can better index and rank your content</li>
+        <li><strong>Maintainability:</strong> Code is easier to read and maintain</li>
+        <li><strong>Future-proofing:</strong> More likely to work with future technologies</li>
+        <li><strong>Team collaboration:</strong> Other developers can understand your code better</li>
+    </ul>
+    
+    <!-- Document Structure Elements -->
+    <hr>
+    <h2>Document Structure Elements</h2>
+    
+    <h3>&lt;header&gt; Element</h3>
+    <p>The <code>&lt;header&gt;</code> element represents introductory content or navigational aids.</p>
+    
+    <!-- Example header -->
+    <header style="border: 2px solid #333; padding: 10px; margin: 10px 0;">
+        <h1>Website Title</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <h3>&lt;nav&gt; Element</h3>
+    <p>The <code>&lt;nav&gt;</code> element defines a section with navigation links.</p>
+    
+    <!-- Example navigation -->
+    <nav style="border: 2px solid #666; padding: 10px; margin: 10px 0;">
+        <h4>Site Navigation</h4>
+        <ul>
+            <li><a href="#tutorials">Tutorials</a></li>
+            <li><a href="#references">References</a></li>
+            <li><a href="#examples">Examples</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Breadcrumb navigation -->
+    <nav aria-label="Breadcrumb" style="border: 2px solid #999; padding: 10px; margin: 10px 0;">
+        <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/tutorials/">Tutorials</a></li>
+            <li><a href="/tutorials/html/">HTML</a></li>
+            <li>Semantic Elements</li>
+        </ol>
+    </nav>
+    
+    <h3>&lt;main&gt; Element</h3>
+    <p>The <code>&lt;main&gt;</code> element represents the main content of the document. 
+    There should be only one <code>&lt;main&gt;</code> element per page.</p>
+    
+    <!-- Example main content -->
+    <main style="border: 2px solid #0066cc; padding: 10px; margin: 10px 0;">
+        <h4>Main Content Area</h4>
+        <p>This is the primary content of the page. It should contain the unique content 
+        that is directly related to the document's central topic.</p>
+        
+        <article>
+            <h5>Article within Main</h5>
+            <p>Articles can be nested within the main content area.</p>
+        </article>
+    </main>
+    
+    <h3>&lt;footer&gt; Element</h3>
+    <p>The <code>&lt;footer&gt;</code> element represents footer information for its nearest sectioning content.</p>
+    
+    <!-- Example footer -->
+    <footer style="border: 2px solid #333; padding: 10px; margin: 10px 0;">
+        <p>&copy; 2024 HTML Learning. All rights reserved.</p>
+        <nav>
+            <a href="#privacy">Privacy Policy</a> |
+            <a href="#terms">Terms of Service</a> |
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </footer>
+    
+    <!-- Content Sectioning Elements -->
+    <hr>
+    <h2>Content Sectioning Elements</h2>
+    
+    <h3>&lt;section&gt; Element</h3>
+    <p>The <code>&lt;section&gt;</code> element represents a generic section of content, 
+    typically with a heading.</p>
+    
+    <!-- Example sections -->
+    <section style="border: 2px solid #009900; padding: 10px; margin: 10px 0;">
+        <h4>About Our Company</h4>
+        <p>This section contains information about our company history and mission.</p>
+        <p>We have been serving customers since 2010 with quality web development services.</p>
+    </section>
+    
+    <section style="border: 2px solid #009900; padding: 10px; margin: 10px 0;">
+        <h4>Our Services</h4>
+        <p>This section outlines the various services we offer to our clients.</p>
+        <ul>
+            <li>Web Design</li>
+            <li>Web Development</li>
+            <li>SEO Optimization</li>
+            <li>Maintenance</li>
+        </ul>
+    </section>
+    
+    <h3>&lt;article&gt; Element</h3>
+    <p>The <code>&lt;article&gt;</code> element represents a self-contained composition 
+    that could be distributed independently.</p>
+    
+    <!-- Example articles -->
+    <article style="border: 2px solid #cc6600; padding: 10px; margin: 10px 0;">
+        <header>
+            <h4>Understanding HTML5 Semantic Elements</h4>
+            <p>Published on <time datetime="2024-01-15">January 15, 2024</time> by <strong>John Doe</strong></p>
+        </header>
+        
+        <p>HTML5 introduced many new semantic elements that help structure web documents 
+        in a more meaningful way. These elements provide better accessibility and SEO benefits.</p>
+        
+        <section>
+            <h5>Key Benefits</h5>
+            <ul>
+                <li>Improved accessibility for screen readers</li>
+                <li>Better search engine optimization</li>
+                <li>Cleaner, more maintainable code</li>
+            </ul>
+        </section>
+        
+        <footer>
+            <p>Tags: <a href="#html5">HTML5</a>, <a href="#semantic">Semantic</a>, <a href="#accessibility">Accessibility</a></p>
+        </footer>
+    </article>
+    
+    <article style="border: 2px solid #cc6600; padding: 10px; margin: 10px 0;">
+        <header>
+            <h4>Best Practices for Web Development</h4>
+            <p>Published on <time datetime="2024-01-10">January 10, 2024</time> by <strong>Jane Smith</strong></p>
+        </header>
+        
+        <p>Following best practices in web development ensures your websites are accessible, 
+        performant, and maintainable.</p>
+        
+        <p>Always validate your HTML, use semantic elements appropriately, and test across 
+        different browsers and devices.</p>
+        
+        <footer>
+            <p>Tags: <a href="#best-practices">Best Practices</a>, <a href="#web-dev">Web Development</a></p>
+        </footer>
+    </article>
+    
+    <h3>&lt;aside&gt; Element</h3>
+    <p>The <code>&lt;aside&gt;</code> element represents content that is tangentially related 
+    to the main content.</p>
+    
+    <!-- Example aside -->
+    <aside style="border: 2px solid #9900cc; padding: 10px; margin: 10px 0; float: right; width: 300px;">
+        <h4>Related Links</h4>
+        <ul>
+            <li><a href="https://developer.mozilla.org">MDN Web Docs</a></li>
+            <li><a href="https://www.w3.org">W3C</a></li>
+            <li><a href="https://html.spec.whatwg.org/">HTML Living Standard</a></li>
+        </ul>
+        
+        <h4>Quick Tip</h4>
+        <p>Always use semantic HTML elements instead of generic divs when the content 
+        has a specific meaning or purpose.</p>
+    </aside>
+    
+    <!-- Text Content Elements -->
+    <hr style="clear: both;">
+    <h2>Text Content Semantic Elements</h2>
+    
+    <h3>&lt;figure&gt; and &lt;figcaption&gt;</h3>
+    <p>The <code>&lt;figure&gt;</code> element represents self-contained content, 
+    often with a caption defined by <code>&lt;figcaption&gt;</code>.</p>
+    
+    <!-- Example figure with image -->
+    <figure style="border: 2px solid #666; padding: 10px; margin: 10px 0; text-align: center;">
+        <img src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop" 
+             alt="Web development workspace" 
+             width="400" 
+             height="200">
+        <figcaption>A typical web development workspace with multiple monitors and code editors</figcaption>
+    </figure>
+    
+    <!-- Example figure with code -->
+    <figure style="border: 2px solid #666; padding: 10px; margin: 10px 0;">
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;title&gt;Semantic HTML Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Page Title&lt;/h1&gt;
+    &lt;/header&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <figcaption>Example of basic HTML5 semantic structure</figcaption>
+    </figure>
+    
+    <h3>&lt;details&gt; and &lt;summary&gt;</h3>
+    <p>The <code>&lt;details&gt;</code> element creates a disclosure widget, 
+    with <code>&lt;summary&gt;</code> providing the visible heading.</p>
+    
+    <!-- Example details/summary -->
+    <details style="border: 2px solid #333; padding: 10px; margin: 10px 0;">
+        <summary>What are the benefits of semantic HTML?</summary>
+        <p>Semantic HTML provides several benefits:</p>
+        <ul>
+            <li>Better accessibility for users with disabilities</li>
+            <li>Improved SEO rankings</li>
+            <li>Easier maintenance and debugging</li>
+            <li>Better browser support for features</li>
+            <li>More meaningful code structure</li>
+        </ul>
+    </details>
+    
+    <details style="border: 2px solid #333; padding: 10px; margin: 10px 0;">
+        <summary>How do I choose the right semantic element?</summary>
+        <p>Consider the purpose and meaning of your content:</p>
+        <ul>
+            <li>Use <code>&lt;article&gt;</code> for standalone content</li>
+            <li>Use <code>&lt;section&gt;</code> for thematic groupings</li>
+            <li>Use <code>&lt;aside&gt;</code> for tangentially related content</li>
+            <li>Use <code>&lt;nav&gt;</code> for navigation links</li>
+            <li>Use <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> for introductory and concluding content</li>
+        </ul>
+    </details>
+    
+    <!-- Time Element -->
+    <hr>
+    <h2>&lt;time&gt; Element</h2>
+    <p>The <code>&lt;time&gt;</code> element represents a specific period in time or a date.</p>
+    
+    <h3>Time Examples:</h3>
+    <ul>
+        <li>The meeting is scheduled for <time datetime="2024-03-15T14:30">March 15th at 2:30 PM</time></li>
+        <li>This article was published on <time datetime="2024-01-15">January 15, 2024</time></li>
+        <li>The event lasts for <time datetime="PT2H30M">2 hours and 30 minutes</time></li>
+        <li>We're open from <time datetime="09:00">9:00 AM</time> to <time datetime="17:00">5:00 PM</time></li>
+    </ul>
+    
+    <!-- Address Element -->
+    <hr>
+    <h2>&lt;address&gt; Element</h2>
+    <p>The <code>&lt;address&gt;</code> element provides contact information for its nearest article or body ancestor.</p>
+    
+    <!-- Example address -->
+    <address style="border: 2px solid #666; padding: 10px; margin: 10px 0;">
+        <strong>Contact Information:</strong><br>
+        John Doe<br>
+        Web Developer<br>
+        <a href="mailto:john@example.com">john@example.com</a><br>
+        <a href="tel:+1234567890">+1 (234) 567-8900</a><br>
+        123 Web Street<br>
+        HTML City, HC 12345
+    </address>
+    
+    <!-- Semantic vs Non-Semantic Comparison -->
+    <hr>
+    <h2>Semantic vs Non-Semantic HTML Comparison</h2>
+    
+    <h3>❌ Non-Semantic HTML (Avoid)</h3>
+    <div style="border: 2px solid #cc0000; padding: 10px; margin: 10px 0;">
+        <pre><code>&lt;div class="header"&gt;
+    &lt;div class="title"&gt;Page Title&lt;/div&gt;
+    &lt;div class="nav"&gt;
+        &lt;div class="nav-item"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/div&gt;
+        &lt;div class="nav-item"&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="main-content"&gt;
+    &lt;div class="article"&gt;
+        &lt;div class="article-title"&gt;Article Title&lt;/div&gt;
+        &lt;div class="article-content"&gt;Article content...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="sidebar"&gt;
+    &lt;div class="widget"&gt;Related links...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="footer"&gt;
+    &lt;div class="copyright"&gt;Copyright info...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+    
+    <h3>✅ Semantic HTML (Recommended)</h3>
+    <div style="border: 2px solid #00cc00; padding: 10px; margin: 10px 0;">
+        <pre><code>&lt;header&gt;
+    &lt;h1&gt;Page Title&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;article&gt;
+        &lt;h2&gt;Article Title&lt;/h2&gt;
+        &lt;p&gt;Article content...&lt;/p&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
+
+&lt;aside&gt;
+    &lt;section&gt;
+        &lt;h3&gt;Related Links&lt;/h3&gt;
+        &lt;ul&gt;...&lt;/ul&gt;
+    &lt;/section&gt;
+&lt;/aside&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;&copy; 2024 Copyright info...&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+    </div>
+    
+    <!-- Complete Semantic Page Structure -->
+    <hr>
+    <h2>Complete Semantic Page Structure Example</h2>
+    
+    <div style="border: 2px solid #0066cc; padding: 10px; margin: 10px 0;">
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Semantic HTML Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;My Blog&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;article&gt;
+            &lt;header&gt;
+                &lt;h2&gt;Understanding Semantic HTML&lt;/h2&gt;
+                &lt;p&gt;Published on &lt;time datetime="2024-01-15"&gt;January 15, 2024&lt;/time&gt;&lt;/p&gt;
+            &lt;/header&gt;
+            
+            &lt;section&gt;
+                &lt;h3&gt;Introduction&lt;/h3&gt;
+                &lt;p&gt;Semantic HTML is important for...&lt;/p&gt;
+            &lt;/section&gt;
+            
+            &lt;section&gt;
+                &lt;h3&gt;Benefits&lt;/h3&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;Better accessibility&lt;/li&gt;
+                    &lt;li&gt;Improved SEO&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/section&gt;
+            
+            &lt;footer&gt;
+                &lt;p&gt;Tags: HTML5, Semantic, Accessibility&lt;/p&gt;
+            &lt;/footer&gt;
+        &lt;/article&gt;
+    &lt;/main&gt;
+
+    &lt;aside&gt;
+        &lt;section&gt;
+            &lt;h3&gt;Related Posts&lt;/h3&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;HTML5 Features&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;CSS Best Practices&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/section&gt;
+    &lt;/aside&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;&copy; 2024 My Blog. All rights reserved.&lt;/p&gt;
+        &lt;address&gt;
+            Contact: &lt;a href="mailto:info@myblog.com"&gt;info@myblog.com&lt;/a&gt;
+        &lt;/address&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+    
+    <!-- Best Practices -->
+    <hr>
+    <h2>Semantic HTML Best Practices</h2>
+    
+    <h3>✅ Do:</h3>
+    <ul>
+        <li>Choose elements based on meaning, not appearance</li>
+        <li>Use headings (h1-h6) to create a logical document outline</li>
+        <li>Use only one <code>&lt;main&gt;</code> element per page</li>
+        <li>Use <code>&lt;article&gt;</code> for content that makes sense on its own</li>
+        <li>Use <code>&lt;section&gt;</code> to group related content with a heading</li>
+        <li>Use <code>&lt;nav&gt;</code> for major navigation blocks</li>
+        <li>Include <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> where appropriate</li>
+        <li>Use <code>&lt;time&gt;</code> for dates and times with datetime attribute</li>
+        <li>Validate your HTML regularly</li>
+    </ul>
+    
+    <h3>❌ Don't:</h3>
+    <ul>
+        <li>Use semantic elements just for styling purposes</li>
+        <li>Nest <code>&lt;main&gt;</code> elements</li>
+        <li>Use <code>&lt;section&gt;</code> as a generic container (use <code>&lt;div&gt;</code> instead)</li>
+        <li>Put <code>&lt;main&gt;</code> inside <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;header&gt;</code>, or <code>&lt;nav&gt;</code></li>
+        <li>Use multiple <code>&lt;h1&gt;</code> elements without proper sectioning</li>
+        <li>Ignore the document outline structure</li>
+        <li>Use semantic elements when generic containers would be more appropriate</li>
+    </ul>
+    
+    <!-- Testing Semantic Structure -->
+    <hr>
+    <h2>Testing Your Semantic Structure</h2>
+    
+    <h3>Tools for Testing:</h3>
+    <ul>
+        <li><strong>HTML5 Outliner:</strong> Check your document outline structure</li>
+        <li><strong>WAVE Web Accessibility Evaluator:</strong> Test accessibility</li>
+        <li><strong>Screen Readers:</strong> Test with actual assistive technology</li>
+        <li><strong>Browser Developer Tools:</strong> Inspect the accessibility tree</li>
+        <li><strong>W3C Markup Validator:</strong> Validate your HTML</li>
+    </ul>
+    
+    <h3>Questions to Ask:</h3>
+    <ul>
+        <li>Does my document have a logical heading structure?</li>
+        <li>Can screen reader users navigate my content easily?</li>
+        <li>Do my semantic elements accurately describe their content?</li>
+        <li>Would my page make sense without CSS styling?</li>
+        <li>Are my navigation areas clearly identified?</li>
+    </ul>
+    
+    <p><a href="#top">Back to Top</a></p>
+    
+</body>
+</html>

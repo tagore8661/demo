@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables</title>
+</head>
+<body>
+    <h1>HTML Tables</h1>
+    
+    <!-- Basic Table Structure -->
+    <h2>Basic Table Structure</h2>
+    <p>HTML tables are created using several elements working together:</p>
+    <ul>
+        <li><code>&lt;table&gt;</code> - The container for the entire table</li>
+        <li><code>&lt;tr&gt;</code> - Table row</li>
+        <li><code>&lt;td&gt;</code> - Table data cell</li>
+        <li><code>&lt;th&gt;</code> - Table header cell</li>
+    </ul>
+    
+    <h3>Simple Table Example</h3>
+    <!-- Basic 3x3 table -->
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>John Doe</td>
+            <td>25</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>Jane Smith</td>
+            <td>30</td>
+            <td>Los Angeles</td>
+        </tr>
+        <tr>
+            <td>Bob Johnson</td>
+            <td>35</td>
+            <td>Chicago</td>
+        </tr>
+    </table>
+    
+    <!-- Table with Caption -->
+    <hr>
+    <h2>Table with Caption</h2>
+    <p>The <code>&lt;caption&gt;</code> element provides a title for the table:</p>
+    
+    <table border="1">
+        <caption>Employee Information</caption>
+        <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Salary</th>
+        </tr>
+        <tr>
+            <td>001</td>
+            <td>Alice Brown</td>
+            <td>Engineering</td>
+            <td>$75,000</td>
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Charlie Davis</td>
+            <td>Marketing</td>
+            <td>$65,000</td>
+        </tr>
+        <tr>
+            <td>003</td>
+            <td>Diana Wilson</td>
+            <td>Sales</td>
+            <td>$70,000</td>
+        </tr>
+    </table>
+    
+    <!-- Table Sections -->
+    <hr>
+    <h2>Table Sections</h2>
+    <p>Tables can be divided into logical sections:</p>
+    <ul>
+        <li><code>&lt;thead&gt;</code> - Table header section</li>
+        <li><code>&lt;tbody&gt;</code> - Table body section</li>
+        <li><code>&lt;tfoot&gt;</code> - Table footer section</li>
+    </ul>
+    
+    <table border="1">
+        <caption>Quarterly Sales Report</caption>
+        
+        <!-- Table Header -->
+        <thead>
+            <tr>
+                <th>Quarter</th>
+                <th>Product A</th>
+                <th>Product B</th>
+                <th>Product C</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        
+        <!-- Table Body -->
+        <tbody>
+            <tr>
+                <td>Q1 2024</td>
+                <td>$10,000</td>
+                <td>$15,000</td>
+                <td>$8,000</td>
+                <td>$33,000</td>
+            </tr>
+            <tr>
+                <td>Q2 2024</td>
+                <td>$12,000</td>
+                <td>$18,000</td>
+                <td>$9,500</td>
+                <td>$39,500</td>
+            </tr>
+            <tr>
+                <td>Q3 2024</td>
+                <td>$14,000</td>
+                <td>$20,000</td>
+                <td>$11,000</td>
+                <td>$45,000</td>
+            </tr>
+        </tbody>
+        
+        <!-- Table Footer -->
+        <tfoot>
+            <tr>
+                <th>Total</th>
+                <th>$36,000</th>
+                <th>$53,000</th>
+                <th>$28,500</th>
+                <th>$117,500</th>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <!-- Column Spanning -->
+    <hr>
+    <h2>Column Spanning (colspan)</h2>
+    <p>The <code>colspan</code> attribute makes a cell span multiple columns:</p>
+    
+    <table border="1">
+        <caption>Project Timeline</caption>
+        <tr>
+            <th>Phase</th>
+            <th colspan="3">Timeline</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>Planning</td>
+            <td>Week 1</td>
+            <td>Week 2</td>
+            <td>Week 3</td>
+            <td>Complete</td>
+        </tr>
+        <tr>
+            <td>Development</td>
+            <td colspan="3">Week 4 - Week 12</td>
+            <td>In Progress</td>
+        </tr>
+        <tr>
+            <td>Testing</td>
+            <td colspan="2">Week 13 - Week 14</td>
+            <td>Week 15</td>
+            <td>Pending</td>
+        </tr>
+    </table>
+    
+    <!-- Row Spanning -->
+    <hr>
+    <h2>Row Spanning (rowspan)</h2>
+    <p>The <code>rowspan</code> attribute makes a cell span multiple rows:</p>
+    
+    <table border="1">
+        <caption>Course Schedule</caption>
+        <tr>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+        </tr>
+        <tr>
+            <td>9:00 AM</td>
+            <td rowspan="2">Mathematics<br>(Room 101)</td>
+            <td>English</td>
+            <td>Science</td>
+        </tr>
+        <tr>
+            <td>10:00 AM</td>
+            <!-- Mathematics cell spans this row too -->
+            <td>History</td>
+            <td rowspan="2">Computer Science<br>(Lab 201)</td>
+        </tr>
+        <tr>
+            <td>11:00 AM</td>
+            <td>Physical Education</td>
+            <td>Art</td>
+            <!-- Computer Science cell spans this row too -->
+        </tr>
+    </table>
+    
+    <!-- Complex Table with Both Spanning -->
+    <hr>
+    <h2>Complex Table with Both Column and Row Spanning</h2>
+    
+    <table border="1">
+        <caption>Company Organizational Chart</caption>
+        <tr>
+            <th colspan="4">Executive Level</th>
+        </tr>
+        <tr>
+            <td colspan="4">CEO - John Smith</td>
+        </tr>
+        <tr>
+            <th colspan="2">Operations</th>
+            <th colspan="2">Technology</th>
+        </tr>
+        <tr>
+            <td rowspan="2">COO<br>Sarah Johnson</td>
+            <td>Sales Manager<br>Mike Brown</td>
+            <td rowspan="2">CTO<br>Lisa Davis</td>
+            <td>Lead Developer<br>Tom Wilson</td>
+        </tr>
+        <tr>
+            <!-- COO cell spans this row -->
+            <td>Marketing Manager<br>Emma Taylor</td>
+            <!-- CTO cell spans this row -->
+            <td>System Admin<br>Alex Chen</td>
+        </tr>
+    </table>
+    
+    <!-- Table Headers with Scope -->
+    <hr>
+    <h2>Table Headers with Scope Attribute</h2>
+    <p>The <code>scope</code> attribute helps screen readers understand table structure:</p>
+    
+    <table border="1">
+        <caption>Monthly Budget Breakdown</caption>
+        <tr>
+            <th scope="col">Category</th>
+            <th scope="col">January</th>
+            <th scope="col">February</th>
+            <th scope="col">March</th>
+        </tr>
+        <tr>
+            <th scope="row">Housing</th>
+            <td>$1,200</td>
+            <td>$1,200</td>
+            <td>$1,250</td>
+        </tr>
+        <tr>
+            <th scope="row">Food</th>
+            <td>$400</td>
+            <td>$450</td>
+            <td>$425</td>
+        </tr>
+        <tr>
+            <th scope="row">Transportation</th>
+            <td>$300</td>
+            <td>$280</td>
+            <td>$320</td>
+        </tr>
+        <tr>
+            <th scope="row">Entertainment</th>
+            <td>$200</td>
+            <td>$150</td>
+            <td>$180</td>
+        </tr>
+    </table>
+    
+    <!-- Column Groups -->
+    <hr>
+    <h2>Column Groups</h2>
+    <p>Use <code>&lt;colgroup&gt;</code> and <code>&lt;col&gt;</code> to group and style columns:</p>
+    
+    <table border="1">
+        <caption>Student Grades</caption>
+        
+        <!-- Column groups for styling -->
+        <colgroup>
+            <col> <!-- Student name column -->
+            <col span="3"> <!-- Test scores columns -->
+            <col> <!-- Final grade column -->
+        </colgroup>
+        
+        <thead>
+            <tr>
+                <th>Student</th>
+                <th>Test 1</th>
+                <th>Test 2</th>
+                <th>Test 3</th>
+                <th>Final Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alice Johnson</td>
+                <td>85</td>
+                <td>92</td>
+                <td>88</td>
+                <td>A-</td>
+            </tr>
+            <tr>
+                <td>Bob Smith</td>
+                <td>78</td>
+                <td>85</td>
+                <td>82</td>
+                <td>B+</td>
+            </tr>
+            <tr>
+                <td>Carol Davis</td>
+                <td>95</td>
+                <td>98</td>
+                <td>94</td>
+                <td>A+</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!-- Data Table with Links -->
+    <hr>
+    <h2>Table with Links and Interactive Content</h2>
+    
+    <table border="1">
+        <caption>Web Development Resources</caption>
+        <thead>
+            <tr>
+                <th>Resource</th>
+                <th>Type</th>
+                <th>Difficulty</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>MDN Web Docs</td>
+                <td>Documentation</td>
+                <td>Beginner to Advanced</td>
+                <td><a href="https://developer.mozilla.org" target="_blank">Visit Site</a></td>
+            </tr>
+            <tr>
+                <td>W3Schools</td>
+                <td>Tutorial</td>
+                <td>Beginner</td>
+                <td><a href="https://www.w3schools.com" target="_blank">Visit Site</a></td>
+            </tr>
+            <tr>
+                <td>freeCodeCamp</td>
+                <td>Interactive Course</td>
+                <td>Beginner to Intermediate</td>
+                <td><a href="https://www.freecodecamp.org" target="_blank">Visit Site</a></td>
+            </tr>
+            <tr>
+                <td>Stack Overflow</td>
+                <td>Q&A Community</td>
+                <td>All Levels</td>
+                <td><a href="https://stackoverflow.com" target="_blank">Visit Site</a></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!-- Accessibility Best Practices -->
+    <hr>
+    <h2>Table Accessibility Best Practices</h2>
+    
+    <h3>Summary of Best Practices:</h3>
+    <ul>
+        <li>Always use <code>&lt;caption&gt;</code> to describe the table's purpose</li>
+        <li>Use <code>&lt;th&gt;</code> elements for headers, not <code>&lt;td&gt;</code></li>
+        <li>Add <code>scope</code> attributes to headers when needed</li>
+        <li>Use <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code> for structure</li>
+        <li>Provide alternative text or summaries for complex tables</li>
+        <li>Ensure sufficient color contrast if using colors</li>
+        <li>Test with screen readers when possible</li>
+    </ul>
+    
+    <!-- Table vs Other Elements -->
+    <hr>
+    <h2>When to Use Tables</h2>
+    
+    <h3>✅ Good Uses for Tables:</h3>
+    <ul>
+        <li>Displaying tabular data (spreadsheet-like information)</li>
+        <li>Comparing data across multiple categories</li>
+        <li>Financial reports, schedules, statistics</li>
+        <li>Any data with clear row/column relationships</li>
+    </ul>
+    
+    <h3>❌ Avoid Tables For:</h3>
+    <ul>
+        <li>Page layout (use CSS Grid or Flexbox instead)</li>
+        <li>Simple lists (use <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>)</li>
+        <li>Positioning elements (use CSS)</li>
+        <li>Creating columns of text (use CSS columns)</li>
+    </ul>
+    
+</body>
+</html>

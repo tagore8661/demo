@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Multimedia Elements</title>
+</head>
+<body>
+    <h1>HTML Multimedia Elements</h1>
+    
+    <!-- Introduction to Multimedia -->
+    <h2>Introduction to HTML Multimedia</h2>
+    <p>HTML5 introduced native support for multimedia content, allowing you to embed images, audio, and video 
+    directly in web pages without requiring plugins like Flash. This provides better performance, accessibility, 
+    and cross-platform compatibility.</p>
+    
+    <h3>Types of Multimedia Elements:</h3>
+    <ul>
+        <li><strong>Images:</strong> <code>&lt;img&gt;</code>, <code>&lt;picture&gt;</code></li>
+        <li><strong>Audio:</strong> <code>&lt;audio&gt;</code></li>
+        <li><strong>Video:</strong> <code>&lt;video&gt;</code></li>
+        <li><strong>Graphics:</strong> <code>&lt;canvas&gt;</code>, <code>&lt;svg&gt;</code></li>
+        <li><strong>External Content:</strong> <code>&lt;embed&gt;</code>, <code>&lt;object&gt;</code></li>
+    </ul>
+    
+    <!-- Images -->
+    <hr>
+    <h2>Images (&lt;img&gt;)</h2>
+    
+    <h3>Basic Image Element</h3>
+    <p>The <code>&lt;img&gt;</code> element embeds images in HTML documents:</p>
+    
+    <!-- Basic image -->
+    <img src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop" 
+         alt="Web development workspace with code on multiple monitors" 
+         width="400" 
+         height="200">
+    
+    <h3>Image Attributes</h3>
+    <dl>
+        <dt><code>src</code> (required)</dt>
+        <dd>Specifies the path to the image file</dd>
+        
+        <dt><code>alt</code> (required)</dt>
+        <dd>Provides alternative text for accessibility and when image fails to load</dd>
+        
+        <dt><code>width</code> and <code>height</code></dt>
+        <dd>Specify image dimensions in pixels</dd>
+        
+        <dt><code>title</code></dt>
+        <dd>Provides additional information (tooltip on hover)</dd>
+        
+        <dt><code>loading</code></dt>
+        <dd>Controls when the image loads (lazy, eager)</dd>
+        
+        <dt><code>decoding</code></dt>
+        <dd>Provides hint for image decoding (sync, async, auto)</dd>
+    </dl>
+    
+    <h3>Image Examples</h3>
+    
+    <!-- Image with title -->
+    <p><strong>Image with title attribute:</strong></p>
+    <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop" 
+         alt="Person typing on laptop keyboard" 
+         title="Programming and web development"
+         width="300" 
+         height="200">
+    
+    <!-- Lazy loading image -->
+    <p><strong>Lazy loading image:</strong></p>
+    <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop" 
+         alt="HTML code displayed on computer screen" 
+         loading="lazy"
+         width="300" 
+         height="200">
+    
+    <!-- Responsive Images with Picture Element -->
+    <hr>
+    <h2>Responsive Images (&lt;picture&gt;)</h2>
+    
+    <h3>Picture Element for Art Direction</h3>
+    <p>The <code>&lt;picture&gt;</code> element allows you to provide multiple image sources 
+    for different screen sizes and conditions:</p>
+    
+    <!-- Picture element example -->
+    <picture>
+        <!-- Large screens -->
+        <source media="(min-width: 800px)" 
+                srcset="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=800&h=300&fit=crop">
+        
+        <!-- Medium screens -->
+        <source media="(min-width: 400px)" 
+                srcset="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop">
+        
+        <!-- Fallback for older browsers and small screens -->
+        <img src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=300&h=150&fit=crop" 
+             alt="Responsive web development workspace"
+             width="300" 
+             height="150">
+    </picture>
+    
+    <h3>Different Image Formats</h3>
+    <p>You can provide modern image formats with fallbacks:</p>
+    
+    <!-- Modern image formats with fallback -->
+    <picture>
+        <!-- WebP format for supported browsers -->
+        <source type="image/webp" 
+                srcset="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop&fm=webp">
+        
+        <!-- AVIF format for supported browsers -->
+        <source type="image/avif" 
+                srcset="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop&fm=avif">
+        
+        <!-- Fallback JPEG -->
+        <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop" 
+             alt="Modern image format example"
+             width="300" 
+             height="200">
+    </picture>
+    
+    <!-- Audio Elements -->
+    <hr>
+    <h2>Audio (&lt;audio&gt;)</h2>
+    
+    <h3>Basic Audio Element</h3>
+    <p>The <code>&lt;audio&gt;</code> element embeds audio content in HTML:</p>
+    
+    <!-- Basic audio with controls -->
+    <audio controls>
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" type="audio/mpeg">
+        <p>Your browser does not support the audio element. 
+        <a href="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3">Download the audio file</a>.</p>
+    </audio>
+    
+    <h3>Audio Attributes</h3>
+    <dl>
+        <dt><code>controls</code></dt>
+        <dd>Shows audio controls (play, pause, volume, etc.)</dd>
+        
+        <dt><code>autoplay</code></dt>
+        <dd>Automatically starts playing (use carefully - can be annoying)</dd>
+        
+        <dt><code>loop</code></dt>
+        <dd>Repeats the audio when it ends</dd>
+        
+        <dt><code>muted</code></dt>
+        <dd>Starts with audio muted</dd>
+        
+        <dt><code>preload</code></dt>
+        <dd>Hints how much audio to preload (none, metadata, auto)</dd>
+        
+        <dt><code>src</code></dt>
+        <dd>Direct source URL (alternative to using source elements)</dd>
+    </dl>
+    
+    <h3>Audio Examples</h3>
+    
+    <!-- Audio with different preload settings -->
+    <p><strong>Audio with metadata preload:</strong></p>
+    <audio controls preload="metadata">
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" type="audio/mpeg">
+        <p>Your browser does not support the audio element.</p>
+    </audio>
+    
+    <!-- Audio with loop -->
+    <p><strong>Looping audio (be careful with this!):</strong></p>
+    <audio controls loop>
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" type="audio/mpeg">
+        <p>Your browser does not support the audio element.</p>
+    </audio>
+    
+    <!-- Video Elements -->
+    <hr>
+    <h2>Video (&lt;video&gt;)</h2>
+    
+    <h3>Basic Video Element</h3>
+    <p>The <code>&lt;video&gt;</code> element embeds video content:</p>
+    
+    <!-- Basic video with controls -->
+    <video controls width="400" height="300">
+        <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+        <source src="https://sample-videos.com/zip/10/webm/SampleVideo_1280x720_1mb.webm" type="video/webm">
+        <p>Your browser does not support the video element. 
+        <a href="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4">Download the video</a>.</p>
+    </video>
+    
+    <h3>Video Attributes</h3>
+    <dl>
+        <dt><code>controls</code></dt>
+        <dd>Shows video controls (play, pause, volume, fullscreen, etc.)</dd>
+        
+        <dt><code>width</code> and <code>height</code></dt>
+        <dd>Specify video player dimensions</dd>
+        
+        <dt><code>autoplay</code></dt>
+        <dd>Automatically starts playing (requires muted in most browsers)</dd>
+        
+        <dt><code>loop</code></dt>
+        <dd>Repeats the video when it ends</dd>
+        
+        <dt><code>muted</code></dt>
+        <dd>Starts with audio muted</dd>
+        
+        <dt><code>poster</code></dt>
+        <dd>Image to show before video plays</dd>
+        
+        <dt><code>preload</code></dt>
+        <dd>Hints how much video to preload (none, metadata, auto)</dd>
+    </dl>
+    
+    <h3>Video Examples</h3>
+    
+    <!-- Video with poster -->
+    <p><strong>Video with poster image:</strong></p>
+    <video controls width="400" height="300" 
+           poster="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop">
+        <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+        <p>Your browser does not support the video element.</p>
+    </video>
+    
+    <!-- Autoplay muted video (common for background videos) -->
+    <p><strong>Autoplay muted video:</strong></p>
+    <video autoplay muted loop width="300" height="200">
+        <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+        <p>Your browser does not support the video element.</p>
+    </video>
+    
+    <!-- Canvas Element -->
+    <hr>
+    <h2>Canvas (&lt;canvas&gt;)</h2>
+    
+    <h3>Basic Canvas</h3>
+    <p>The <code>&lt;canvas&gt;</code> element provides a drawing surface for graphics via JavaScript:</p>
+    
+    <!-- Canvas example -->
+    <canvas id="myCanvas" width="400" height="200" style="border: 1px solid #000;">
+        Your browser does not support the canvas element.
+    </canvas>
+    
+    <script>
+        // Simple canvas drawing example
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Draw a rectangle
+        ctx.fillStyle = '#3498db';
+        ctx.fillRect(50, 50, 100, 80);
+        
+        // Draw a circle
+        ctx.beginPath();
+        ctx.arc(250, 90, 40, 0, 2 * Math.PI);
+        ctx.fillStyle = '#e74c3c';
+        ctx.fill();
+        
+        // Draw text
+        ctx.font = '20px Arial';
+        ctx.fillStyle = '#2c3e50';
+        ctx.fillText('Canvas Graphics', 120, 150);
+    </script>
+    
+    <!-- SVG Element -->
+    <hr>
+    <h2>SVG (Scalable Vector Graphics)</h2>
+    
+    <h3>Inline SVG</h3>
+    <p>SVG can be embedded directly in HTML for scalable vector graphics:</p>
+    
+    <!-- Inline SVG example -->
+    <svg width="300" height="200" style="border: 1px solid #ccc;">
+        <!-- Rectangle -->
+        <rect x="20" y="20" width="80" height="60" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+        
+        <!-- Circle -->
+        <circle cx="180" cy="50" r="30" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+        
+        <!-- Line -->
+        <line x1="20" y1="120" x2="280" y2="120" stroke="#34495e" stroke-width="3"/>
+        
+        <!-- Text -->
+        <text x="50" y="160" font-family="Arial" font-size="18" fill="#2c3e50">SVG Graphics</text>
+        
+        <!-- Polygon (triangle) -->
+        <polygon points="220,100 250,140 190,140" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+    </svg>
+    
+    <!-- Embed and Object Elements -->
+    <hr>
+    <h2>Embed and Object Elements</h2>
+    
+    <h3>&lt;embed&gt; Element</h3>
+    <p>The <code>&lt;embed&gt;</code> element embeds external content:</p>
+    
+    <!-- Embed example (PDF) -->
+    <embed src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" 
+           type="application/pdf" 
+           width="400" 
+           height="300">
+    
+    <h3>&lt;object&gt; Element</h3>
+    <p>The <code>&lt;object&gt;</code> element embeds external resources with fallback content:</p>
+    
+    <!-- Object example -->
+    <object data="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" 
+            type="application/pdf" 
+            width="400" 
+            height="300">
+        <p>Your browser does not support PDF viewing. 
+        <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf">Download the PDF</a>.</p>
+    </object>
+    
+    <!-- Multimedia Best Practices -->
+    <hr>
+    <h2>Multimedia Best Practices</h2>
+    
+    <h3>✅ Do:</h3>
+    <ul>
+        <li><strong>Always provide alt text</strong> for images</li>
+        <li><strong>Use appropriate file formats:</strong>
+            <ul>
+                <li>JPEG for photos</li>
+                <li>PNG for graphics with transparency</li>
+                <li>WebP/AVIF for modern browsers</li>
+                <li>MP4 for video</li>
+                <li>MP3/AAC for audio</li>
+            </ul>
+        </li>
+        <li><strong>Optimize file sizes</strong> for web delivery</li>
+        <li><strong>Provide multiple formats</strong> for better browser support</li>
+        <li><strong>Use lazy loading</strong> for images below the fold</li>
+        <li><strong>Include fallback content</strong> for unsupported browsers</li>
+        <li><strong>Consider accessibility</strong> - provide captions for videos</li>
+        <li><strong>Test on different devices</strong> and connection speeds</li>
+    </ul>
+    
+    <h3>❌ Don't:</h3>
+    <ul>
+        <li>Use autoplay for audio/video with sound (annoying to users)</li>
+        <li>Forget alt attributes on images</li>
+        <li>Use huge file sizes that slow down page loading</li>
+        <li>Rely solely on multimedia for important information</li>
+        <li>Use Flash or other deprecated plugins</li>
+        <li>Ignore mobile users and slow connections</li>
+        <li>Use copyrighted content without permission</li>
+    </ul>
+    
+    <!-- Accessibility Considerations -->
+    <hr>
+    <h2>Multimedia Accessibility</h2>
+    
+    <h3>Images</h3>
+    <ul>
+        <li>Always include meaningful alt text</li>
+        <li>Use empty alt="" for decorative images</li>
+        <li>Don't put important text in images</li>
+        <li>Ensure sufficient color contrast</li>
+    </ul>
+    
+    <h3>Audio and Video</h3>
+    <ul>
+        <li>Provide captions for videos</li>
+        <li>Include transcripts for audio content</li>
+        <li>Don't rely on color alone to convey information</li>
+        <li>Ensure controls are keyboard accessible</li>
+        <li>Provide audio descriptions for visual content</li>
+    </ul>
+    
+    <!-- Performance Considerations -->
+    <hr>
+    <h2>Performance Optimization</h2>
+    
+    <h3>Image Optimization</h3>
+    <ul>
+        <li>Use appropriate dimensions (don't scale large images with HTML)</li>
+        <li>Compress images without losing quality</li>
+        <li>Use modern formats (WebP, AVIF) with fallbacks</li>
+        <li>Implement lazy loading for below-the-fold images</li>
+        <li>Use responsive images with srcset</li>
+    </ul>
+    
+    <h3>Video Optimization</h3>
+    <ul>
+        <li>Use appropriate video codecs (H.264, VP9, AV1)</li>
+        <li>Provide multiple quality options</li>
+        <li>Use poster images to reduce initial load</li>
+        <li>Consider using preload="metadata" instead of "auto"</li>
+        <li>Implement adaptive streaming for long videos</li>
+    </ul>
+    
+    <!-- Example: Complete Multimedia Gallery -->
+    <hr>
+    <h2>Complete Multimedia Gallery Example</h2>
+    
+    <section style="border: 2px solid #3498db; padding: 20px; margin: 20px 0;">
+        <h3>Web Development Portfolio</h3>
+        
+        <!-- Image gallery -->
+        <figure>
+            <picture>
+                <source media="(min-width: 600px)" 
+                        srcset="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop">
+                <img src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop" 
+                     alt="Modern web development workspace with multiple monitors showing code"
+                     loading="lazy">
+            </picture>
+            <figcaption>Our modern development environment</figcaption>
+        </figure>
+        
+        <!-- Video showcase -->
+        <figure>
+            <video controls width="400" height="225" 
+                   poster="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=400&h=225&fit=crop">
+                <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+                <track kind="captions" src="captions.vtt" srclang="en" label="English">
+                <p>Your browser doesn't support video. <a href="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4">Download the video</a>.</p>
+            </video>
+            <figcaption>Project demonstration video</figcaption>
+        </figure>
+        
+        <!-- Audio testimonial -->
+        <figure>
+            <audio controls preload="metadata">
+                <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" type="audio/mpeg">
+                <p>Your browser doesn't support audio. <a href="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3">Download the audio</a>.</p>
+            </audio>
+            <figcaption>Client testimonial audio</figcaption>
+        </figure>
+        
+        <!-- Interactive canvas -->
+        <figure>
+            <canvas id="portfolioCanvas" width="400" height="200" style="border: 1px solid #bdc3c7;">
+                Your browser doesn't support canvas.
+            </canvas>
+            <figcaption>Interactive project visualization</figcaption>
+        </figure>
+    </section>
+    
+    <script>
+        // Canvas animation for portfolio
+        const portfolioCanvas = document.getElementById('portfolioCanvas');
+        const portfolioCtx = portfolioCanvas.getContext('2d');
+        
+        function drawPortfolioVisualization() {
+            // Clear canvas
+            portfolioCtx.clearRect(0, 0, 400, 200);
+            
+            // Draw background
+            portfolioCtx.fillStyle = '#ecf0f1';
+            portfolioCtx.fillRect(0, 0, 400, 200);
+            
+            // Draw bars representing different skills
+            const skills = [
+                { name: 'HTML', level: 90, color: '#e74c3c' },
+                { name: 'CSS', level: 85, color: '#3498db' },
+                { name: 'JavaScript', level: 80, color: '#f39c12' },
+                { name: 'React', level: 75, color: '#2ecc71' }
+            ];
+            
+            skills.forEach((skill, index) => {
+                const x = 50 + index * 80;
+                const barHeight = (skill.level / 100) * 120;
+                const y = 150 - barHeight;
+                
+                // Draw bar
+                portfolioCtx.fillStyle = skill.color;
+                portfolioCtx.fillRect(x, y, 60, barHeight);
+                
+                // Draw skill name
+                portfolioCtx.fillStyle = '#2c3e50';
+                portfolioCtx.font = '12px Arial';
+                portfolioCtx.textAlign = 'center';
+                portfolioCtx.fillText(skill.name, x + 30, 170);
+                
+                // Draw percentage
+                portfolioCtx.fillText(skill.level + '%', x + 30, y - 10);
+            });
+            
+            // Draw title
+            portfolioCtx.font = '16px Arial';
+            portfolioCtx.fillStyle = '#2c3e50';
+            portfolioCtx.textAlign = 'center';
+            portfolioCtx.fillText('Skills Overview', 200, 30);
+        }
+        
+        drawPortfolioVisualization();
+    </script>
+    
+    <p><a href="#top">Back to Top</a></p>
+    
+</body>
+</html>
