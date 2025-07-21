@@ -1,0 +1,23 @@
+{
+  "name": "html-learning-repository",
+  "version": "1.0.0",
+  "description": "A comprehensive HTML learning resource from basic to advanced concepts",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'No build process needed for static HTML files' && exit 0",
+    "start": "echo 'This is a static HTML learning repository. Open any HTML file in a browser to view.' && exit 0"
+  },
+  "keywords": [
+    "html",
+    "learning",
+    "tutorial",
+    "web-development",
+    "education"
+  ],
+  "author": "HTML Learning Repository",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "html-learning-repository"
+  }
+}
